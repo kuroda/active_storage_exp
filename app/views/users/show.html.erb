@@ -6,7 +6,7 @@
 </p>
 
 <div>
-  <%= image_tag @user.avatar if @user.avatar.attached? %>
+  <%= image_tag @user.avatar.variant(resize: "200x200") if @user.avatar.attached? %>
 </div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
